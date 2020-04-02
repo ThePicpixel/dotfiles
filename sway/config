@@ -9,8 +9,9 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 # Program Launcher
 ################################################################################
 bindsym $mod+t exec alacritty
-bindsym $mod+c exec emacs
+bindsym $mod+a exec emacs
 bindsym $mod+p exec grim -g "$(slurp -d)" - > ~/Pictures/$(date | sed 's/ /_/g').png
+bindsym $mod+c exec chromium
 ###
 # Windows
 ################################################################################
