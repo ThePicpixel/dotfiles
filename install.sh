@@ -59,7 +59,7 @@ sudo systemctl start powertop
 log "Setting up dotfiles"
 mkdir ~/Documents
 cd ~/Documents
-git clone http://github.com/0pendev/dotfiles
+git clone http://github.com/ThePicpixel/dotfiles
 rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
 mkdir ~/.config

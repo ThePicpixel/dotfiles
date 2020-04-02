@@ -140,7 +140,7 @@ font pango:DejaVu Sans Mono 8
 default_border pixel 2
 include ./default.theme.config
 #output "*" bg "/usr/share/backgrounds/Ryan Schroeder.jpg" fill
-output "*" bg "/home/opendev/Pictures/Untitled.png" fill
+#output "*" bg "/home/opendev/Pictures/Untitled.png" fill
 ###
 # Other
 ################################################################################
