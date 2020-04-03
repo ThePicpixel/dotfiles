@@ -63,6 +63,7 @@ git clone http://github.com/ThePicpixel/dotfiles
 rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
 mkdir ~/.config
+rm ~/.config/chromium/Default/Preferences
 ln -s ~/Documents/dotfiles/alacritty ~/.config
 ln -s ~/Documents/dotfiles/i3status ~/.config
 ln -s ~/Documents/dotfiles/rofi ~/.config
@@ -71,6 +72,7 @@ ln -s ~/Documents/dotfiles/sakura ~/.config
 ln -s ~/Documents/dotfiles/xorg/.xinitrc ~/.xinitrc
 ln -s ~/Documents/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/Documents/dotfiles/albert ~/.config
+ln -s ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
