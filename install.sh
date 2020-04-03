@@ -7,7 +7,7 @@ warning(){
     echo "$(date) [!] $1" | tee -a ~/installation.log
 }
 
-alias install="sudo zypper in"
+alias install="sudo zypper in -y"
 alias upgrade="sudo zypper dup"
 
 log "Starting installation $(date)"
@@ -51,6 +51,7 @@ install\
 
 log "Installing fonts"
 install -t pattern fonts
+install alee-fonts
 
 log "Setting up powertop"
 sudo systemctl enable powertop
