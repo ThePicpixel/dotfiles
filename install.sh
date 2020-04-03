@@ -58,6 +58,12 @@ sudo systemctl start powertop
 
 log "Setting up dotfiles"
 mkdir ~/Documents
+mkdir ~/Téléchargements
+mkdir ~/Images
+mkdir ~/Vidéos
+
+cp wallpaper.png ~/Images
+
 cd ~/Documents
 git clone http://github.com/ThePicpixel/dotfiles
 rm -rf ~/.emacs*
