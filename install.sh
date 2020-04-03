@@ -63,10 +63,11 @@ mkdir ~/Téléchargements
 mkdir ~/Images
 mkdir ~/Vidéos
 
-cp wallpaper.png ~/Images
-
 cd ~/Documents
 git clone http://github.com/ThePicpixel/dotfiles
+
+cp dotfiles/wallpaper.png ~/Images/
+
 rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
 mkdir ~/.config
