@@ -80,7 +80,8 @@ ln -s ~/Documents/dotfiles/sakura ~/.config
 ln -s ~/Documents/dotfiles/xorg/.xinitrc ~/.xinitrc
 ln -s ~/Documents/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/Documents/dotfiles/albert ~/.config
-ln -s ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default
+
+cp ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
