@@ -10,7 +10,7 @@ bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. 
 ################################################################################
 bindsym $mod+t exec alacritty
 bindsym $mod+a exec emacs
-bindsym $mod+p exec grim -g "$(slurp -d)" - > ~/Pictures/$(date | sed 's/ /_/g').png
+bindsym $mod+p exec grim -g "$(slurp -d)" - > ~/Images/$(date | sed 's/ /_/g').png
 bindsym $mod+c exec chromium
 ###
 # Windows
@@ -100,9 +100,9 @@ bindsym --to-code {
 ###
 # Sound configuration
 ################################################################################
-#bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
-#bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
-#bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
+bindsym XF86AudioMute exec "pactl set-sink-mute 0 toggle"
+bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume 0 +5%"
+bindsym XF86AudioLowerVolume exec "pactl set-sink-volume 0 -5%"
 #bindsym XF86AudioMute exec "amixer set Master toggle"
 #bindsym XF86AudioRaiseVolume exec "amixer set Master -q 5%+"
 #bindsym XF86AudioLowerVolume exec "amixer set Master -q 5%-"
