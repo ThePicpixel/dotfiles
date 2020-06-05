@@ -78,14 +78,22 @@
    #+END_SRC
 * Org-mode
    #+BEGIN_SRC emacs-lisp
+     (defun insert-zero-width-space ()
+       (interactive)
+       (insert-char #x200b))
+
      (use-package org
        :config
        (setq org-src-fontify-natively t)
        (setq org-todo-keywords '((sequence "TODO(t)" "IN WORK(w)" "|" "DONE(d)" "CANCELED(c)"))))
+       (define-key org-mode-map (kbd "C-*") 'insert-zero-width-space)
+       (setq org-emphasis-regexp-components
+	   '("   ('\"{\x200B" "-     .,:!?;'\")}\\[\x200B" ",\"'" "." 1))
      (use-package org-re-reveal
        :ensure t
        :after org)
    #+END_SRC
+
 * Elfeed
   #+BEGIN_SRC emacs-lisp
     (use-package elfeed
@@ -187,3 +195,9 @@
        (setq python-shell-interpreter "python3"))
    #+END_SRC
    
+** C
+   #+BEGIN_SRC emacs-lisp
+     (use-package go-mode
+       :ensure t
+       :hook (c-mode . lsp))
+    #+END_SRC

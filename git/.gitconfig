@@ -1,5 +1,6 @@
 [user]
 	email = thepicpixel@r0nd.fr
 	name = Hugo PICHON
+	signingkey = D03C243FB5ABBAA5
 [commit]
-	gpgsign = false
+	gpgsign = true
