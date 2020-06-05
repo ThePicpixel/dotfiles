@@ -49,6 +49,14 @@ install\
     chromium keepassxc telegram-desktop wget htop\
     yubioath-desktop nextcloud-client NetworkManager-connection-editor
 
+log "Installing video codecs"
+install opi
+opi codecs
+
+log "Installing auio"
+install pavucontrol
+install pulseaudio
+
 log "Installing fonts"
 install -t pattern fonts
 install alee-fonts

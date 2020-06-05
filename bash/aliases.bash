@@ -21,4 +21,4 @@ alias zypal="sudo zypper al"
 # Reddit on terminal is awesome
 alias reddit="rtv"
 # Random aliases
-alias bye="echo \"See you $USER@$HOST !\" && sudo poweroff"
+alias bye="echo \"See ya $USER@$HOST !\" && sudo poweroff"
