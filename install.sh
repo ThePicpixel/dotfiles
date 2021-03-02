@@ -40,9 +40,9 @@ install\
 log "Installing gef for gdb"
 wget -q -O- https://github.com/hugsy/gef/raw/master/scripts/gef.sh | sh
 
-log "Installing theme assets"
-install\
-     qt5ct elementary-icon-theme breeze5-cursors elementary-wallpapers
+#log "Installing theme assets"
+#install\
+#     qt5ct elementary-icon-theme breeze5-cursors elementary-wallpapers
 
 log "Installing usefull stuff"
 install\
@@ -67,14 +67,14 @@ sudo systemctl start powertop
 
 log "Setting up dotfiles"
 mkdir ~/Documents
-mkdir ~/Téléchargements
-mkdir ~/Images
+mkdir ~/Downloads
+mkdir ~/Pictures
 mkdir ~/Vidéos
 
 cd ~/Documents
 git clone http://github.com/ThePicpixel/dotfiles
 
-cp dotfiles/wallpaper.png ~/Images/
+cp dotfiles/wallpaper.png ~/Pictures/
 
 rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d

@@ -139,11 +139,12 @@ bindswitch --reload lid:off output $laptop enable
 ################################################################################
 font pango:DejaVu Sans Mono 8
 default_border pixel 2
-include ./default.theme.config
-#output "*" bg "/usr/share/backgrounds/Ryan Schroeder.jpg" fill
-output "*" bg "/home/thepicpixel/Images/wallpaper.png" fill
+# Uncomment if there is no default theme
+#include ./default.theme.config
+include /etc/sway/config.d/*
+
+output "*" bg "/home/thepicpixel/Pictures/wallpaper.png" fill
 ###
 # Other
 ################################################################################
-include /etc/sway/config.d/*
 exec --no-startup-id albert
