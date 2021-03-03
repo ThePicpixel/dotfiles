@@ -19,7 +19,6 @@ log "Installing wayland graphical environment"
 install\
     rofi thunar sway brightnessctl swaylock lxsession lxappearance\
     alacritty i3status
-sudo zypper al 'sway*'
 
 log "Installing development tools"
 install\
@@ -40,7 +39,7 @@ install pulseaudio
 
 log "Installing fonts"
 install -t pattern fonts
-install alee-fonts
+install un-fonts ubuntu-fonts
 
 log "Setting up powertop"
 sudo systemctl enable powertop
