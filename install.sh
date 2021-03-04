@@ -66,9 +66,7 @@ cp dotfiles/wallpaper.png ~/Pictures/
 
 rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
-
-mkdir -p ~/.config/chromium/Default
-cp ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default/Preferences
+git clone https://github.com/arcticicestudio/nord-emacs.git ~/.emacs.d/themes
 
 ln -s ~/Documents/dotfiles/alacritty ~/.config
 ln -s ~/Documents/dotfiles/i3status ~/.config
