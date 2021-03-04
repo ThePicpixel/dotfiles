@@ -68,6 +68,14 @@ rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
 git clone https://github.com/arcticicestudio/nord-emacs.git ~/.emacs.d/themes
 
+mkdir -p ~/.themes
+git clone https://github.com/EliverLara/Nordic.git ~/.themes/Nordic
+
+git clone https://github.com/basigur/papirus-folders.git
+mkdir -p ~/.local/share/icons
+cp -r papirus-folders/src/*apirus*nordic*folders/ ~/.local/share/icons/
+rm -rf papirus-folders
+
 ln -s ~/Documents/dotfiles/alacritty ~/.config
 ln -s ~/Documents/dotfiles/i3status ~/.config
 ln -s ~/Documents/dotfiles/rofi ~/.config
