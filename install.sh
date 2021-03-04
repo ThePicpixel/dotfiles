@@ -49,10 +49,10 @@ log "Setting up dotfiles"
 mkdir ~/Documents
 mkdir ~/Downloads
 mkdir ~/Pictures
-mkdir ~/Vidéos
+mkdir ~/Videos
 
 cd ~/Documents
-git clone http://github.com/ThePicpixel/dotfiles --single-branch dev
+git clone http://github.com/ThePicpixel/dotfiles --single-branch --branch dev
 
 cp dotfiles/wallpaper.png ~/Pictures/
 

@@ -9,7 +9,6 @@ general {
 order += "volume master"
 order += "disk /"
 order += "disk /home"
-order += "disk /var"
 order += "wireless wlp2s0"
 order += "wireless wlp3s0"
 order += "wireless wlp0s20u3u1"
@@ -104,18 +103,9 @@ disk "/home" {
         threshold_type = percentage_avail
 }
 
-
-disk "/var" {
-        format = " /var %avail"
-        prefix_type     = custom
-        low_threshold = 20
-        threshold_type = percentage_avail
-}
-
-
 volume master {
-    format = "  %volume"
-    format_muted = " "
+    format = " %volume"
+    format_muted = ""
     device = "default"
     mixer = "Master"
     mixer_idx = 0
