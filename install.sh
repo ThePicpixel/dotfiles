@@ -26,8 +26,16 @@ install\
 
 log "Installing usefull stuff"
 install\
-    chromium keepassxc telegram-desktop wget htop\
-    yubioath-desktop nextcloud-client NetworkManager-connection-editor
+    flatpak NetworkManager-connection-editor
+
+log "Installing flatpak apps"
+flatpak --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install --user flathub org.gnu.emacs
+flatpak install --user flathub org.chromium.Chromium
+flatpak install --user flathub org.keepassxc.KeePassXC
+flatpak install --user flathub org.telegram.desktop
+flatpak install --user flathub com.nextcloud.desktopclient.nextcloud
 
 log "Installing video codecs"
 install opi
@@ -39,7 +47,7 @@ install pulseaudio
 
 log "Installing fonts"
 install -t pattern fonts
-install un-fonts ubuntu-fonts
+install ubuntu-fonts
 
 log "Setting up powertop"
 sudo systemctl enable powertop
@@ -60,7 +68,7 @@ rm -rf ~/.emacs*
 ln -s ~/Documents/dotfiles/emacs ~/.emacs.d
 
 mkdir -p ~/.config/chromium/Default
-
+cp ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default/Preferences
 
 ln -s ~/Documents/dotfiles/alacritty ~/.config
 ln -s ~/Documents/dotfiles/i3status ~/.config
@@ -68,7 +76,6 @@ ln -s ~/Documents/dotfiles/rofi ~/.config
 ln -s ~/Documents/dotfiles/sway ~/.config
 ln -s ~/Documents/dotfiles/git/.gitconfig ~/.gitconfig
 
-cp ~/Documents/dotfiles/chromium/Preferences ~/.config/chromium/Default/Preferences
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
