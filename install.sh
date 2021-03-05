@@ -7,8 +7,8 @@ warning(){
     echo "$(date) [!] $1" | tee -a ~/installation.log
 }
 
-alias install="sudo zypper in"
-alias upgrade="sudo zypper dup"
+alias install="sudo zypper -n in -y"
+alias upgrade="sudo zypper -n dup -y"
 
 log "Starting installation $(date)"
 
@@ -29,13 +29,13 @@ install\
     flatpak NetworkManager-connection-editor
 
 log "Installing flatpak apps"
-flatpak --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak --user --if-not-exists remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install --user flathub org.gnu.emacs
-flatpak install --user flathub org.chromium.Chromium
-flatpak install --user flathub org.keepassxc.KeePassXC
-flatpak install --user flathub org.telegram.desktop
-flatpak install --user flathub com.nextcloud.desktopclient.nextcloud
+flatpak install -y --noninteractive --user flathub org.gnu.emacs
+flatpak install -y --noninteractive --user flathub org.chromium.Chromium
+flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
+flatpak install -y --noninteractive --user flathub org.telegram.desktop
+flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
 
 log "Installing video codecs"
 install opi
