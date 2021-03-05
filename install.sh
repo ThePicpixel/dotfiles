@@ -22,7 +22,7 @@ install\
 
 log "Installing development tools"
 install\
-     emacs git zsh podman buildah python3-virtualenv python3-devel go
+     git zsh podman buildah python3-virtualenv python3-devel go
 
 log "Installing usefull stuff"
 install\
@@ -36,6 +36,8 @@ flatpak install -y --noninteractive --user flathub org.chromium.Chromium
 flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
 flatpak install -y --noninteractive --user flathub org.telegram.desktop
 flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
+
+ln -s ~/.local/share/flatpak/exports/share/applications ~/.local/share/applications
 
 log "Installing video codecs"
 install opi

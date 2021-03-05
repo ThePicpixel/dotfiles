@@ -12,9 +12,9 @@ bindsym $mod+t exec alacritty
 bindsym $mod+a exec flatpak run org.gnu.emacs
 bindsym $mod+p exec grim -g "$(slurp -d)" - > ~/Images/$(date | sed 's/ /_/g').png
 bindsym $mod+c exec flatpak run org.chromium.Chromium
-bindsym $mod+d exec rofi -show run -theme nord
-bindsym $mod+Shift+d exec rofi -show drun -theme nord
-bindsym $mod+w exec rofi -show -theme nord
+bindsym $mod+d exec rofi -show drun -theme nord
+#bindsym $mod+Shift+d exec rofi -show drun -drun -theme nord
+#bindsym $mod+w exec rofi -show window -theme nord
 ###
 # Windows
 ################################################################################
