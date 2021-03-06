@@ -62,7 +62,7 @@ mkdir ~/Pictures
 mkdir ~/Videos
 
 cd ~/Documents
-git clone http://github.com/ThePicpixel/dotfiles --single-branch --branch dev
+git clone http://github.com/ThePicpixel/dotfiles
 
 cp dotfiles/wallpaper.png ~/Pictures/
 
