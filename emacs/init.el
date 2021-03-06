@@ -15,17 +15,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (doom-dark+)))
+ '(custom-enabled-themes '(doom-nord))
  '(custom-safe-themes
-   (quote
-    ("76bfa9318742342233d8b0b42e824130b3a50dcc732866ff8e47366aed69de11" default)))
+   '("fce3524887a0994f8b9b047aef9cc4cc017c5a93a5fb1f84d300391fba313743" "8f5a7a9a3c510ef9cbb88e600c0b4c53cdcdb502cfe3eb50040b7e13c6f4e78e" "2f1518e906a8b60fac943d02ad415f1d8b3933a5a7f75e307e6e9a26ef5bf570" "7a994c16aa550678846e82edc8c9d6a7d39cc6564baaaacc305a3fdc0bd8725f" default))
  '(delete-selection-mode nil)
  '(package-selected-packages
-   (quote
-    (python-mode go-mode go-snippets web-mode emmet-mode yasnippet-snippets yasnippet company-lsp lsp-ui lsp-mode flycheck company elfeed org-re-reveal doom-themes ibuffer-sidebar hide-mode-line doom-modeline dashboard use-package))))
+   '(org-caldav yaml-mode python-mode go-mode go-snippets web-mode emmet-mode yasnippet-snippets yasnippet company-lsp lsp-ui lsp-mode flycheck company org-re-reveal smartparens doom-themes doom-modeline dashboard use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#1e1e1e" :foreground "#d4d4d4" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "ADBO" :family "Source Code Pro")))))
+ )
