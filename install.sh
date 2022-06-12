@@ -24,26 +24,30 @@ log "Installing development tools"
 install\
      git zsh podman buildah python3-virtualenv python3-devel go
 
+log "Installing virtual environment"
+install \
+	libvirt qemu virt-manager libvirt-daemon-driver-qemu qemu-kvm
+
 log "Installing usefull stuff"
 install\
-    flatpak NetworkManager-connection-editor
+    flatpak NetworkManager-connection-editor htop emacs chromium keepassxc nextcloud-desktop telegram-desktop
 
-log "Installing flatpak apps"
-flatpak --user --if-not-exists remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+#log "Installing flatpak apps"
+#flatpak --user --if-not-exists remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install -y --noninteractive --user flathub org.gnu.emacs
-flatpak install -y --noninteractive --user flathub org.chromium.Chromium
-flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
-flatpak install -y --noninteractive --user flathub org.telegram.desktop
-flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
+#flatpak install -y --noninteractive --user flathub org.gnu.emacs
+#flatpak install -y --noninteractive --user flathub org.chromium.Chromium
+#flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
+#flatpak install -y --noninteractive --user flathub org.telegram.desktop
+#flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
 
-ln -s ~/.local/share/flatpak/exports/share/applications ~/.local/share/applications
+#ln -s ~/.local/share/flatpak/exports/share/applications ~/.local/share/applications
 
 log "Installing video codecs"
 install opi
 opi codecs
 
-log "Installing auio"
+log "Installing audio"
 install pavucontrol
 install pulseaudio
 
