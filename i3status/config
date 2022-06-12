@@ -11,7 +11,7 @@ order += "disk /"
 order += "disk /home"
 order += "wireless wlp2s0"
 order += "wireless wlp3s0"
-order += "wireless wlp0s20u3u1"
+order += "wireless wlp0s20f3"
 order += "ethernet enp0s25"
 order += "run_watch VPN"
 order += "battery 0"
@@ -29,7 +29,7 @@ wireless wlp3s0 {
     format_down = ""
 }
 
-wireless wlp0s20u3u1 {
+wireless wlp0s20f3 {
     format_up = "%quality  %essid %ip"
     format_down = ""
 }
