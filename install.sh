@@ -87,7 +87,7 @@ ln -s ~/Documents/dotfiles/i3status ~/.config
 ln -s ~/Documents/dotfiles/rofi ~/.config
 ln -s ~/Documents/dotfiles/sway ~/.config
 ln -s ~/Documents/dotfiles/git/.gitconfig ~/.gitconfig
-
+ln -s ~/Documents/dotfiles/zsh/.zshrc ~/.zshrc
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
