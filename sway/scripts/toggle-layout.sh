@@ -2,6 +2,7 @@
 set -e
 
 STATE_FILE="$HOME/.config/sway/kb-layout.conf"
+mkdir -p "$(dirname "$STATE_FILE")"
 
 current="fr"
 if [ -f "$STATE_FILE" ]; then
