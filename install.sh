@@ -18,7 +18,7 @@ upgrade
 log "Installing wayland graphical environment"
 install\
     rofi thunar sway brightnessctl swaylock lxsession lxappearance\
-    alacritty i3status
+    alacritty i3status greetd tuigreet
 
 log "Installing development tools"
 install\
@@ -88,6 +88,20 @@ ln -s ~/Documents/dotfiles/rofi ~/.config
 ln -s ~/Documents/dotfiles/sway ~/.config
 ln -s ~/Documents/dotfiles/git/.gitconfig ~/.gitconfig
 ln -s ~/Documents/dotfiles/zsh/.zshrc ~/.zshrc
+
+log "Configuring greetd session manager"
+if ! id greeter >/dev/null 2>&1; then
+    log "Creating greeter system user for greetd"
+    sudo useradd -M -G video -s /usr/sbin/nologin greeter
+fi
+sudo mkdir -p /etc/greetd
+sudo cp ~/Documents/dotfiles/greetd/config.toml /etc/greetd/config.toml
+sudo systemctl enable greetd
+
+if systemctl list-unit-files | grep -q '^gdm.service'; then
+    log "Disabling gdm in favor of greetd"
+    sudo systemctl disable --now gdm.service
+fi
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
