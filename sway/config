@@ -15,6 +15,7 @@ bindsym $mod+p exec grim -g "$(slurp -d)" - > ~/Images/$(date | sed 's/ /_/g').p
 bindsym $mod+c exec chromium
 #flatpak run org.chromium.Chromium
 bindsym $mod+d exec rofi -show drun -theme rounded-nord-dark
+bindsym $mod+F1 exec ~/.config/sway/scripts/toggle-layout.sh
 #bindsym $mod+Shift+d exec rofi -show drun -drun -theme nord
 #bindsym $mod+w exec rofi -show window -theme nord
 ###
@@ -78,28 +79,26 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 # switch to workspace
-bindsym --to-code {
-	$mod+ampersand workspace 1
-	$mod+eacute workspace 2
-	$mod+quotedbl workspace 3
-	$mod+apostrophe workspace 4
-	$mod+parenleft workspace 5
-	$mod+minus workspace 6
-	$mod+egrave workspace 7
-	$mod+underscore workspace 8
-	$mod+ccedilla workspace 9
-	$mod+agrave workspace 10
-	$mod+Shift+ampersand move container to workspace 1
-	$mod+Shift+eacute move container to workspace 2
-	$mod+Shift+quotedbl move container to workspace 3
-	$mod+Shift+apostrophe move container to workspace 4
-	$mod+Shift+parenleft move container to workspace 5
-	$mod+Shift+egrave move container to workspace 6
-	$mod+Shift+minus move container to workspace 7
-	$mod+Shift+underscore move container to workspace 8
-	$mod+Shift+ccedilla move container to workspace 9
-	$mod+Shift+agrave move container to workspace 10
-}
+bindcode $mod+10 workspace $ws1
+bindcode $mod+11 workspace $ws2
+bindcode $mod+12 workspace $ws3
+bindcode $mod+13 workspace $ws4
+bindcode $mod+14 workspace $ws5
+bindcode $mod+15 workspace $ws6
+bindcode $mod+16 workspace $ws7
+bindcode $mod+17 workspace $ws8
+bindcode $mod+18 workspace $ws9
+bindcode $mod+19 workspace 10
+bindcode $mod+Shift+10 move container to workspace $ws1
+bindcode $mod+Shift+11 move container to workspace $ws2
+bindcode $mod+Shift+12 move container to workspace $ws3
+bindcode $mod+Shift+13 move container to workspace $ws4
+bindcode $mod+Shift+14 move container to workspace $ws5
+bindcode $mod+Shift+15 move container to workspace $ws6
+bindcode $mod+Shift+16 move container to workspace $ws7
+bindcode $mod+Shift+17 move container to workspace $ws8
+bindcode $mod+Shift+18 move container to workspace $ws9
+bindcode $mod+Shift+19 move container to workspace 10
 
 ###
 # Sound configuration
@@ -120,9 +119,7 @@ bindsym XF86MonBrightnessUp exec "brightnessctl -d intel_backlight s 5%+"
 ###
 # Inputs
 ################################################################################
-input * {
-    xkb_layout fr
-}
+include ./kb-layout.conf
 
 input 2:14:ETPS/2_Elantech_Touchpad {
       tap enabled
