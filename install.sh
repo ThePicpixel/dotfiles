@@ -103,9 +103,9 @@ fi
 sudo systemctl set-default graphical.target
 sudo systemctl enable greetd
 
-if systemctl list-unit-files | grep -q '^gdm.service'; then
-    log "Disabling gdm in favor of greetd"
-    sudo systemctl disable --now gdm.service
+if systemctl is-enabled display-manager.service >/dev/null 2>&1; then
+    log "Disabling existing display manager in favor of greetd"
+    sudo systemctl disable --now display-manager.service
 fi
 
 log "Configure subuids and subgid to support rootless podman"
