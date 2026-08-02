@@ -119,6 +119,7 @@ bindsym XF86MonBrightnessUp exec "brightnessctl -d intel_backlight s 5%+"
 ###
 # Inputs
 ################################################################################
+input type:keyboard xkb_layout fr
 include ./kb-layout.conf
 
 input 2:14:ETPS/2_Elantech_Touchpad {
