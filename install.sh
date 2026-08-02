@@ -82,6 +82,7 @@ mkdir -p ~/.local/share/icons
 cp -r papirus-folders/src/*apirus*nordic*folders/ ~/.local/share/icons/
 rm -rf papirus-folders
 
+mkdir -p ~/.config
 ln -s ~/Documents/dotfiles/alacritty ~/.config
 ln -s ~/Documents/dotfiles/i3status ~/.config
 ln -s ~/Documents/dotfiles/rofi ~/.config
@@ -110,8 +111,8 @@ fi
 
 log "Configure subuids and subgid to support rootless podman"
 myuser=$USER
-sudo usermod --add-subuids 10000-65536 $my_user
-sudo usermod --add-subgid 10000-65536 $my_user
+sudo usermod --add-subuids 10000-65536 $myuser
+sudo usermod --add-subgid 10000-65536 $myuser
 
 log "Installing oh-my-zsh"
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
