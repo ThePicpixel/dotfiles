@@ -74,10 +74,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-	          exec sway
-fi
-
 export DOCKER_HOST=/run/user/1000/podman/podman.sock
 
 # User configuration
