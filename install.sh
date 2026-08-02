@@ -100,6 +100,7 @@ log "Seeding default keyboard layout state"
 if [ ! -f ~/Documents/dotfiles/sway/kb-layout.conf ]; then
     echo "input type:keyboard xkb_layout fr" > ~/Documents/dotfiles/sway/kb-layout.conf
 fi
+sudo systemctl set-default graphical.target
 sudo systemctl enable greetd
 
 if systemctl list-unit-files | grep -q '^gdm.service'; then
