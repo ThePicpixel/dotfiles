@@ -30,18 +30,20 @@ install \
 
 log "Installing usefull stuff"
 install\
-    flatpak NetworkManager-connection-editor htop emacs chromium keepassxc nextcloud-desktop telegram-desktop
+    flatpak NetworkManager-connection-editor htop emacs
 
-#log "Installing flatpak apps"
-#flatpak --user --if-not-exists remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
+log "Installing flatpak apps"
+flatpak --user --if-not-exists remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 
-#flatpak install -y --noninteractive --user flathub org.gnu.emacs
-#flatpak install -y --noninteractive --user flathub org.chromium.Chromium
-#flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
-#flatpak install -y --noninteractive --user flathub org.telegram.desktop
-#flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
+flatpak install -y --noninteractive --user flathub org.gnu.emacs
+flatpak install -y --noninteractive --user flathub org.keepassxc.KeePassXC
+flatpak install -y --noninteractive --user flathub com.nextcloud.desktopclient.nextcloud
+flatpak install -y --noninteractive --user flathub org.signal.Signal
+flatpak install -y --noninteractive --user flathub com.visualstudio.code
+flatpak install -y --noninteractive --user flathub com.bitwarden.desktop
+flatpak install -y --noninteractive --user flathub app.zen_browser.zen
 
-#ln -s ~/.local/share/flatpak/exports/share/applications ~/.local/share/applications
+ln -s ~/.local/share/flatpak/exports/share/applications ~/.local/share/applications
 
 log "Installing video codecs"
 install opi
