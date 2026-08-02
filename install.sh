@@ -18,7 +18,7 @@ upgrade
 log "Installing wayland graphical environment"
 install\
     rofi thunar sway brightnessctl swaylock lxsession lxappearance\
-    alacritty i3status greetd tuigreet
+    alacritty i3status greetd greetd-branding-upstream tuigreet
 
 log "Installing development tools"
 install\
