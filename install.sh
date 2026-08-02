@@ -96,6 +96,10 @@ if ! id greeter >/dev/null 2>&1; then
 fi
 sudo mkdir -p /etc/greetd
 sudo cp ~/Documents/dotfiles/greetd/config.toml /etc/greetd/config.toml
+log "Seeding default keyboard layout state"
+if [ ! -f ~/Documents/dotfiles/sway/kb-layout.conf ]; then
+    echo "input type:keyboard xkb_layout fr" > ~/Documents/dotfiles/sway/kb-layout.conf
+fi
 sudo systemctl enable greetd
 
 if systemctl list-unit-files | grep -q '^gdm.service'; then

@@ -5,3 +5,4 @@ emacs/*
 !emacs/old.org
 !emacs/light.org
 !emacs/minimalist.el
+sway/kb-layout.conf
